@@ -1,0 +1,321 @@
+{
+  "description": "Finite synthetic benchmark; not a real-survey calibration.",
+  "calibration": {
+    "threshold": 5.14548901155449,
+    "target_rate": 0.1,
+    "training_seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118
+    ],
+    "training_scores": [
+      5.917564345264007,
+      4.142404686816089,
+      5.145489011554489,
+      4.572814294795505,
+      5.0993697989839095,
+      4.785025898233651,
+      4.752361202979343,
+      4.7815820625500765,
+      4.910137438220315,
+      4.329390237898782,
+      4.86196872396837,
+      4.144132035254598,
+      4.684010618195819,
+      4.570292577110146,
+      4.97275580013903,
+      4.8846259565045775,
+      4.1486060897432635,
+      4.80223848669548,
+      4.783627262902338
+    ],
+    "rank": 18,
+    "note": "Empirical synthetic threshold; not a real-data false-alarm probability."
+  },
+  "holdout": {
+    "threshold": 5.14548901155449,
+    "noise_trials": [
+      {
+        "seed": 200,
+        "detected": false
+      },
+      {
+        "seed": 201,
+        "detected": false
+      },
+      {
+        "seed": 202,
+        "detected": false
+      },
+      {
+        "seed": 203,
+        "detected": false
+      },
+      {
+        "seed": 204,
+        "detected": false
+      },
+      {
+        "seed": 205,
+        "detected": false
+      },
+      {
+        "seed": 206,
+        "detected": false
+      },
+      {
+        "seed": 207,
+        "detected": true
+      },
+      {
+        "seed": 208,
+        "detected": false
+      },
+      {
+        "seed": 209,
+        "detected": false
+      }
+    ],
+    "injection_trials": [
+      {
+        "seed": 300,
+        "recovered": true,
+        "periods": [
+          3.499959210098856
+        ]
+      },
+      {
+        "seed": 301,
+        "recovered": true,
+        "periods": [
+          3.500010723796555
+        ]
+      },
+      {
+        "seed": 302,
+        "recovered": true,
+        "periods": [
+          3.499962428397769
+        ]
+      },
+      {
+        "seed": 303,
+        "recovered": true,
+        "periods": [
+          3.5000282519730836
+        ]
+      },
+      {
+        "seed": 304,
+        "recovered": true,
+        "periods": [
+          3.4998960518304485
+        ]
+      },
+      {
+        "seed": 305,
+        "recovered": true,
+        "periods": [
+          3.499950609920069
+        ]
+      },
+      {
+        "seed": 306,
+        "recovered": true,
+        "periods": [
+          3.499878095025787
+        ]
+      },
+      {
+        "seed": 307,
+        "recovered": true,
+        "periods": [
+          3.4999794521619902
+        ]
+      },
+      {
+        "seed": 308,
+        "recovered": true,
+        "periods": [
+          3.500094924367871
+        ]
+      },
+      {
+        "seed": 309,
+        "recovered": true,
+        "periods": [
+          3.5001002782338446
+        ]
+      }
+    ],
+    "false_alarm_fraction": 0.1,
+    "false_alarm_interval_95": [
+      0.0025285785444617865,
+      0.4450161170281954
+    ],
+    "recovery_fraction": 1.0,
+    "recovery_interval_95": [
+      0.6915028921812392,
+      1.0
+    ],
+    "injection": {
+      "period": 3.5,
+      "t0": 2.0,
+      "rp": 0.1,
+      "period_tolerance": 0.01
+    },
+    "note": "Holdout results describe this synthetic generator, not real-survey performance."
+  },
+  "shape_confusion": {
+    "matrix": {
+      "sphere": {
+        "sphere": 1,
+        "ringed": 0,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 1,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "ringed": {
+        "sphere": 0,
+        "ringed": 2,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "comet_tail": {
+        "sphere": 0,
+        "ringed": 2,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "binary_planet": {
+        "sphere": 0,
+        "ringed": 2,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "oblate": {
+        "sphere": 2,
+        "ringed": 0,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "dust_cloud": {
+        "sphere": 0,
+        "ringed": 2,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      }
+    },
+    "trials": [
+      {
+        "seed": 401,
+        "injected": "sphere",
+        "predicted": "sphere",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "sphere",
+        "predicted": "oblate",
+        "status": "PASS"
+      },
+      {
+        "seed": 401,
+        "injected": "ringed",
+        "predicted": "ringed",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "ringed",
+        "predicted": "ringed",
+        "status": "PASS"
+      },
+      {
+        "seed": 401,
+        "injected": "comet_tail",
+        "predicted": "ringed",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "comet_tail",
+        "predicted": "ringed",
+        "status": "PASS"
+      },
+      {
+        "seed": 401,
+        "injected": "binary_planet",
+        "predicted": "ringed",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "binary_planet",
+        "predicted": "ringed",
+        "status": "PASS"
+      },
+      {
+        "seed": 401,
+        "injected": "oblate",
+        "predicted": "sphere",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "oblate",
+        "predicted": "sphere",
+        "status": "PASS"
+      },
+      {
+        "seed": 401,
+        "injected": "dust_cloud",
+        "predicted": "ringed",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "dust_cloud",
+        "predicted": "ringed",
+        "status": "PASS"
+      }
+    ],
+    "period": 3.5,
+    "rp": 0.1,
+    "min_power": 8.0,
+    "note": "Classification at one set of injected parameters; expand the grid before drawing conclusions."
+  }
+}

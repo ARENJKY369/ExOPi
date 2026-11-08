@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shapehunter"
+version = "0.1.0"
+description = "Shape-aware exoplanet transit search pipeline (CPU-first)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "shapehunter contributors"}]
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "astropy>=5.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+full = [
+    "matplotlib>=3.6",
+    "pandas>=1.5",
+    "h5py>=3.8",
+    "tqdm>=4.65",
+    "lightkurve>=2.4",
+    "emcee>=3.1",
+    "streamlit>=1.25",
+]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+shapehunter-run-star = "shapehunter.pipeline.run_star:main"
+shapehunter-batch = "shapehunter.pipeline.batch:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]

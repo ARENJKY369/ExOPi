@@ -1,0 +1,139 @@
+{
+  "description": "Same synthetic family/seed set as calibration-benchmark.json, with shape-specific ephemeris optimization.",
+  "shape_confusion": {
+    "matrix": {
+      "sphere": {
+        "sphere": 2,
+        "ringed": 0,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "ringed": {
+        "sphere": 0,
+        "ringed": 2,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "comet_tail": {
+        "sphere": 0,
+        "ringed": 0,
+        "comet_tail": 2,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "binary_planet": {
+        "sphere": 0,
+        "ringed": 0,
+        "comet_tail": 0,
+        "binary_planet": 2,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "oblate": {
+        "sphere": 2,
+        "ringed": 0,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "dust_cloud": {
+        "sphere": 0,
+        "ringed": 0,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 2,
+        "missed": 0
+      }
+    },
+    "trials": [
+      {
+        "seed": 401,
+        "injected": "sphere",
+        "predicted": "sphere",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "sphere",
+        "predicted": "sphere",
+        "status": "PASS"
+      },
+      {
+        "seed": 401,
+        "injected": "ringed",
+        "predicted": "ringed",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "ringed",
+        "predicted": "ringed",
+        "status": "PASS"
+      },
+      {
+        "seed": 401,
+        "injected": "comet_tail",
+        "predicted": "comet_tail",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "comet_tail",
+        "predicted": "comet_tail",
+        "status": "PASS"
+      },
+      {
+        "seed": 401,
+        "injected": "binary_planet",
+        "predicted": "binary_planet",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "binary_planet",
+        "predicted": "binary_planet",
+        "status": "PASS"
+      },
+      {
+        "seed": 401,
+        "injected": "oblate",
+        "predicted": "sphere",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "oblate",
+        "predicted": "sphere",
+        "status": "PASS"
+      },
+      {
+        "seed": 401,
+        "injected": "dust_cloud",
+        "predicted": "dust_cloud",
+        "status": "PASS"
+      },
+      {
+        "seed": 402,
+        "injected": "dust_cloud",
+        "predicted": "dust_cloud",
+        "status": "PASS"
+      }
+    ],
+    "period": 3.5,
+    "rp": 0.1,
+    "min_power": 8.0,
+    "note": "Classification at one set of injected parameters; expand the grid before drawing conclusions."
+  }
+}

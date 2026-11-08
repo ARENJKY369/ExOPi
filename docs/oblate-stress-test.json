@@ -1,0 +1,149 @@
+{
+  "trials": [
+    {
+      "injected": "sphere",
+      "flattening": null,
+      "impact": 0.0,
+      "seed": 501,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 0.8774147564349732
+    },
+    {
+      "injected": "sphere",
+      "flattening": null,
+      "impact": 0.0,
+      "seed": 502,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 2.0678392586332848
+    },
+    {
+      "injected": "sphere",
+      "flattening": null,
+      "impact": 0.4,
+      "seed": 501,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 1.9806008688337897
+    },
+    {
+      "injected": "sphere",
+      "flattening": null,
+      "impact": 0.4,
+      "seed": 502,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 1.3838232881880685
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.0,
+      "impact": 0.0,
+      "seed": 501,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 0.8774147564349732
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.0,
+      "impact": 0.0,
+      "seed": 502,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 2.0678392586332848
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.0,
+      "impact": 0.4,
+      "seed": 501,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 1.9806008688337897
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.0,
+      "impact": 0.4,
+      "seed": 502,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 1.3838232881880685
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.25,
+      "impact": 0.0,
+      "seed": 501,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 0.7003609425250943
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.25,
+      "impact": 0.0,
+      "seed": 502,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 0.03509454019558689
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.25,
+      "impact": 0.4,
+      "seed": 501,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 1.6167836364120376
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.25,
+      "impact": 0.4,
+      "seed": 502,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 1.147716118027347
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.5,
+      "impact": 0.0,
+      "seed": 501,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 0.5056286914777957
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.5,
+      "impact": 0.0,
+      "seed": 502,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 0.2769383819036193
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.5,
+      "impact": 0.4,
+      "seed": 501,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 0.22611539099671063
+    },
+    {
+      "injected": "oblate",
+      "flattening": 0.5,
+      "impact": 0.4,
+      "seed": 502,
+      "predicted": "sphere",
+      "assessment": "ambiguous",
+      "score_gap": 1.4892424658764867
+    }
+  ],
+  "note": "Finite synthetic stress test; shape assessments are heuristic, not calibrated probabilities."
+}

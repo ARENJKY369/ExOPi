@@ -1,0 +1,23 @@
+{
+  "target": "Kepler-10 (source-labelled CSV)",
+  "reference_source": "https://github.com/berkeley-stat238/spring-2026/blob/442f73f93c5d200edd3746d2b27a6fb723725042/exoplanet_data.csv",
+  "expected_period": 0.8374907,
+  "period_tolerance": 0.01,
+  "baseline": 88.7020401043992,
+  "periods": [
+    0.8377992030973326
+  ],
+  "recovered": true,
+  "harmonic_periods": [],
+  "candidate_statuses": [
+    "PASS"
+  ],
+  "note": "A single reference target does not establish survey-wide reliability.",
+  "data_source": "https://github.com/MohammedHamadi/Kepler-10-flux-modeling/blob/e3cb83bf31a783bd459522eb13f9dcc4e5030e44/kepler-10_flux.csv",
+  "data_sha256": "c9e12e385ed6035a33002bd42e08693c9f5333987d074ef6df7620496fbbdde1",
+  "catalog_sha256": "3a1bad4f26379d1c46f2c9fdc988203883a975cff9eecaa8aef67594625c67f4",
+  "samples": 4342,
+  "quality_flags": "unavailable",
+  "uncertainties": "robust estimate from flux",
+  "warning": "CSV target identity is source-labelled only; upstream provenance, cadence flags, and individual uncertainties cannot be independently checked from this file."
+}

@@ -1,0 +1,81 @@
+{
+  "min_power": 8.0,
+  "period_tolerance": 0.01,
+  "targets": [
+    {
+      "target_id": "Kepler-1976",
+      "label": "positive",
+      "reference_source": "https://github.com/berkeley-stat238/spring-2026/blob/442f73f93c5d200edd3746d2b27a6fb723725042/exoplanet_data.csv",
+      "expected_period": 4.959319244,
+      "baseline": 88.70250249374658,
+      "status": "evaluated",
+      "periods": [
+        4.959296985107225
+      ],
+      "candidate_statuses": [
+        "PASS"
+      ],
+      "recovered": true,
+      "vetted_recovery": true
+    },
+    {
+      "target_id": "Kepler-10",
+      "label": "positive",
+      "reference_source": "https://github.com/berkeley-stat238/spring-2026/blob/442f73f93c5d200edd3746d2b27a6fb723725042/exoplanet_data.csv",
+      "expected_period": 0.8374907,
+      "baseline": 88.7020401043992,
+      "status": "evaluated",
+      "periods": [
+        0.8377992030973326
+      ],
+      "candidate_statuses": [
+        "PASS"
+      ],
+      "recovered": true,
+      "vetted_recovery": true
+    }
+  ],
+  "recovery": {
+    "successes": 2,
+    "trials": 2,
+    "fraction": 1.0,
+    "interval_95": [
+      0.15811388300841903,
+      1.0
+    ]
+  },
+  "vetted_recovery": {
+    "successes": 2,
+    "trials": 2,
+    "fraction": 1.0,
+    "interval_95": [
+      0.15811388300841903,
+      1.0
+    ]
+  },
+  "false_alarm": {
+    "successes": 0,
+    "trials": 0,
+    "fraction": null,
+    "interval_95": null
+  },
+  "excluded_or_error": 0,
+  "note": "These sample statistics are not survey-wide guarantees; selection and labels matter.",
+  "files": [
+    {
+      "target_id": "Kepler-1976",
+      "path": "kepler1976/kplr011138155-2009259160929_llc.fits",
+      "sha256": "81f5e6e2580002d3673d0f0a0e6097c9e8a8aaf1937049a87c07ab1d3a9b9d41",
+      "data_source": "https://github.com/NarrSf/KeplerTransitAnalysis/tree/fea40407691a78c88c593e97a4f17091671ff401/kepler1976b_fits",
+      "format": "kepler_fits"
+    },
+    {
+      "target_id": "Kepler-10",
+      "path": "kepler10.csv",
+      "sha256": "c9e12e385ed6035a33002bd42e08693c9f5333987d074ef6df7620496fbbdde1",
+      "data_source": "https://github.com/MohammedHamadi/Kepler-10-flux-modeling/blob/e3cb83bf31a783bd459522eb13f9dcc4e5030e44/kepler-10_flux.csv",
+      "format": "flux_csv"
+    }
+  ],
+  "manifest_sha256": "d2de792375af14495889c1ebb8ab73e89aa14b6a1ad0a8c3d6803d8f01945399"
+}
