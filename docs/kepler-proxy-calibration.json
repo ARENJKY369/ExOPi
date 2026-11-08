@@ -1,0 +1,438 @@
+{
+  "dataset_sha256": "f56e24ec1d05c896cdef308a7b927f2269426c2855a583b2273208676b9b9ecf",
+  "seed": 912,
+  "excluded_negative_rows": [
+    47,
+    60,
+    79,
+    83,
+    91,
+    118,
+    131,
+    136,
+    142,
+    219,
+    229,
+    231,
+    247,
+    263,
+    297,
+    300,
+    337,
+    350,
+    360,
+    375,
+    401,
+    409,
+    427,
+    431,
+    448,
+    450,
+    458,
+    459,
+    516,
+    548
+  ],
+  "target_rate": 0.1,
+  "training_rank": 37,
+  "threshold": 18.112285091615934,
+  "assumed_cadence_days": 0.02043365,
+  "training_scores": [
+    {
+      "row_index": 7,
+      "score": 14.769806519006842
+    },
+    {
+      "row_index": 36,
+      "score": 18.11228509161593
+    },
+    {
+      "row_index": 54,
+      "score": 10.60033976577127
+    },
+    {
+      "row_index": 65,
+      "score": 13.746569029463311
+    },
+    {
+      "row_index": 78,
+      "score": 17.120428653771217
+    },
+    {
+      "row_index": 84,
+      "score": 13.209737773660523
+    },
+    {
+      "row_index": 106,
+      "score": 16.777550797723045
+    },
+    {
+      "row_index": 148,
+      "score": 14.147016575734565
+    },
+    {
+      "row_index": 158,
+      "score": 9.653739973922871
+    },
+    {
+      "row_index": 160,
+      "score": 12.937891843327977
+    },
+    {
+      "row_index": 188,
+      "score": 9.36927456215278
+    },
+    {
+      "row_index": 199,
+      "score": 13.581385806464962
+    },
+    {
+      "row_index": 212,
+      "score": 0.0
+    },
+    {
+      "row_index": 213,
+      "score": 16.700603609913507
+    },
+    {
+      "row_index": 228,
+      "score": 2.6688459479406497
+    },
+    {
+      "row_index": 233,
+      "score": 38.6092821445355
+    },
+    {
+      "row_index": 284,
+      "score": 14.068916030946403
+    },
+    {
+      "row_index": 287,
+      "score": 8.962592552630019
+    },
+    {
+      "row_index": 305,
+      "score": 4.990203274530506
+    },
+    {
+      "row_index": 310,
+      "score": 17.432860387870296
+    },
+    {
+      "row_index": 321,
+      "score": 6.092984536871479
+    },
+    {
+      "row_index": 322,
+      "score": 13.806323755121833
+    },
+    {
+      "row_index": 335,
+      "score": 9.349427291549658
+    },
+    {
+      "row_index": 340,
+      "score": 28.834570173767393
+    },
+    {
+      "row_index": 343,
+      "score": 9.928522982568463
+    },
+    {
+      "row_index": 347,
+      "score": 34.52440083007815
+    },
+    {
+      "row_index": 352,
+      "score": 13.044720054607845
+    },
+    {
+      "row_index": 355,
+      "score": 5.657875420467691
+    },
+    {
+      "row_index": 359,
+      "score": 7.530820941149008
+    },
+    {
+      "row_index": 367,
+      "score": 17.765730879120067
+    },
+    {
+      "row_index": 376,
+      "score": 6.288592106017806
+    },
+    {
+      "row_index": 398,
+      "score": 5.1075414955876415
+    },
+    {
+      "row_index": 436,
+      "score": 8.869646921369092
+    },
+    {
+      "row_index": 437,
+      "score": 12.969203064710362
+    },
+    {
+      "row_index": 445,
+      "score": 5.177429109889165
+    },
+    {
+      "row_index": 511,
+      "score": 13.056436105880826
+    },
+    {
+      "row_index": 513,
+      "score": 9.805487487018974
+    },
+    {
+      "row_index": 517,
+      "score": 5.137420448495154
+    },
+    {
+      "row_index": 549,
+      "score": 11.623610834444426
+    },
+    {
+      "row_index": 569,
+      "score": 15.21467166829051
+    }
+  ],
+  "label_1_holdout": [
+    {
+      "row_index": 9,
+      "status": "evaluated",
+      "score": 11.234500915805585,
+      "detected": false
+    },
+    {
+      "row_index": 12,
+      "status": "evaluated",
+      "score": 4.709686280145288,
+      "detected": false
+    },
+    {
+      "row_index": 15,
+      "status": "evaluated",
+      "score": 7.627755489517404,
+      "detected": false
+    },
+    {
+      "row_index": 73,
+      "status": "evaluated",
+      "score": 11.880382502223647,
+      "detected": false
+    },
+    {
+      "row_index": 117,
+      "status": "evaluated",
+      "score": 15.045666928682197,
+      "detected": false
+    },
+    {
+      "row_index": 127,
+      "status": "evaluated",
+      "score": 18.244723595485542,
+      "detected": true
+    },
+    {
+      "row_index": 139,
+      "status": "evaluated",
+      "score": 29.978610017281976,
+      "detected": true
+    },
+    {
+      "row_index": 144,
+      "status": "evaluated",
+      "score": 7.009723191072167,
+      "detected": false
+    },
+    {
+      "row_index": 146,
+      "status": "evaluated",
+      "score": 25.705872430793022,
+      "detected": true
+    },
+    {
+      "row_index": 209,
+      "status": "evaluated",
+      "score": 13.897810345078911,
+      "detected": false
+    },
+    {
+      "row_index": 266,
+      "status": "evaluated",
+      "score": 8.812656756131952,
+      "detected": false
+    },
+    {
+      "row_index": 290,
+      "status": "evaluated",
+      "score": 6.10213350637938,
+      "detected": false
+    },
+    {
+      "row_index": 291,
+      "status": "evaluated",
+      "score": 15.386053209131507,
+      "detected": false
+    },
+    {
+      "row_index": 309,
+      "status": "evaluated",
+      "score": 16.339649058702545,
+      "detected": false
+    },
+    {
+      "row_index": 324,
+      "status": "evaluated",
+      "score": 7.929808283505657,
+      "detected": false
+    },
+    {
+      "row_index": 328,
+      "status": "evaluated",
+      "score": 15.85793293328729,
+      "detected": false
+    },
+    {
+      "row_index": 357,
+      "status": "evaluated",
+      "score": 11.206796594086894,
+      "detected": false
+    },
+    {
+      "row_index": 392,
+      "status": "evaluated",
+      "score": 24.889545299201735,
+      "detected": true
+    },
+    {
+      "row_index": 415,
+      "status": "evaluated",
+      "score": 12.76074061812157,
+      "detected": false
+    },
+    {
+      "row_index": 432,
+      "status": "evaluated",
+      "score": 11.164815867394971,
+      "detected": false
+    },
+    {
+      "row_index": 443,
+      "status": "evaluated",
+      "score": 6.3089357381985725,
+      "detected": false
+    },
+    {
+      "row_index": 460,
+      "status": "evaluated",
+      "score": 7.33589141436519,
+      "detected": false
+    },
+    {
+      "row_index": 461,
+      "status": "evaluated",
+      "score": 10.292248065342319,
+      "detected": false
+    },
+    {
+      "row_index": 466,
+      "status": "evaluated",
+      "score": 6.72632064868309,
+      "detected": false
+    },
+    {
+      "row_index": 475,
+      "status": "evaluated",
+      "score": 6.481905532605513,
+      "detected": false
+    },
+    {
+      "row_index": 495,
+      "status": "evaluated",
+      "score": 16.7444066315965,
+      "detected": false
+    },
+    {
+      "row_index": 522,
+      "status": "evaluated",
+      "score": 5.65572046631317,
+      "detected": false
+    },
+    {
+      "row_index": 542,
+      "status": "evaluated",
+      "score": 20.170147275067226,
+      "detected": true
+    },
+    {
+      "row_index": 560,
+      "status": "evaluated",
+      "score": 13.259698193727699,
+      "detected": false
+    },
+    {
+      "row_index": 562,
+      "status": "evaluated",
+      "score": 7.460425172029689,
+      "detected": false
+    }
+  ],
+  "label_1_summary": {
+    "detected": 5,
+    "evaluated": 30,
+    "errors": 0,
+    "fraction": 0.16666666666666666,
+    "interval_95": [
+      0.0564216964680715,
+      0.34721169883414377
+    ]
+  },
+  "label_2_exploratory": [
+    {
+      "row_index": 0,
+      "status": "evaluated",
+      "score": 9.381857156249046,
+      "detected": false
+    },
+    {
+      "row_index": 1,
+      "status": "evaluated",
+      "score": 25.89144392304529,
+      "detected": true
+    },
+    {
+      "row_index": 2,
+      "status": "evaluated",
+      "score": 13.001186014241409,
+      "detected": false
+    },
+    {
+      "row_index": 3,
+      "status": "evaluated",
+      "score": 66.8198282954017,
+      "detected": true
+    },
+    {
+      "row_index": 4,
+      "status": "evaluated",
+      "score": 64.87757440836111,
+      "detected": true
+    }
+  ],
+  "label_2_summary": {
+    "detected": 3,
+    "evaluated": 5,
+    "errors": 0,
+    "fraction": 0.6,
+    "interval_95": [
+      0.14663279963467318,
+      0.9472550494736831
+    ]
+  },
+  "limitations": "Curated proxy labels; unverified cadence, flux scale, target identity and reference periods. Positives were previously inspected. No claim of representative real-survey calibration.",
+  "excluded_report_sha256": "9cd6f02a2a44c34a59b929b196ebb657695444c2d1a32f1d20b0f60b54eb2964"
+}

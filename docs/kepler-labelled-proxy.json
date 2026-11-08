@@ -1,0 +1,401 @@
+{
+  "dataset_sha256": "f56e24ec1d05c896cdef308a7b927f2269426c2855a583b2273208676b9b9ecf",
+  "sample_seed": 422,
+  "assumed_cadence_days": 0.02043365,
+  "selection": "all label-2 rows plus random label-1 rows",
+  "trials": [
+    {
+      "row_index": 0,
+      "label": 2,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        1.4196969395332784
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 1,
+      "label": 2,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        3.2591549058373115
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 2,
+      "label": 2,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        25.078798545303073
+      ],
+      "vetting": [
+        "FAIL"
+      ]
+    },
+    {
+      "row_index": 3,
+      "label": 2,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        2.9958210478370266
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 4,
+      "label": 2,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        3.951841508631228
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 47,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 60,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        9.021043013738124
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 79,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        31.294724963205724
+      ],
+      "vetting": [
+        "UNKNOWN"
+      ]
+    },
+    {
+      "row_index": 83,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 91,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        23.82265048840448
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 118,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 131,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 136,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 142,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        30.74191721643618
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 219,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 229,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        31.900764394813088
+      ],
+      "vetting": [
+        "FAIL"
+      ]
+    },
+    {
+      "row_index": 231,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        23.87170979935718
+      ],
+      "vetting": [
+        "FAIL"
+      ]
+    },
+    {
+      "row_index": 247,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 263,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        29.656456800950025
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 297,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        30.189676029989148
+      ],
+      "vetting": [
+        "UNKNOWN"
+      ]
+    },
+    {
+      "row_index": 300,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        22.286755051962913
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 337,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        32.44530850490243
+      ],
+      "vetting": [
+        "FAIL"
+      ]
+    },
+    {
+      "row_index": 350,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        21.963643080982322
+      ],
+      "vetting": [
+        "UNKNOWN"
+      ]
+    },
+    {
+      "row_index": 360,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        27.872517762085774
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 375,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 401,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        23.934722700199675
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 409,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 427,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 431,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        25.849922455007096
+      ],
+      "vetting": [
+        "FAIL"
+      ]
+    },
+    {
+      "row_index": 448,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        23.473131701377014
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 450,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        14.724049789771012
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 458,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    },
+    {
+      "row_index": 459,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        22.487405187837957
+      ],
+      "vetting": [
+        "FAIL"
+      ]
+    },
+    {
+      "row_index": 516,
+      "label": 1,
+      "status": "evaluated",
+      "detected": true,
+      "periods_assuming_cadence": [
+        31.570898216202565
+      ],
+      "vetting": [
+        "PASS"
+      ]
+    },
+    {
+      "row_index": 548,
+      "label": 1,
+      "status": "evaluated",
+      "detected": false,
+      "periods_assuming_cadence": [],
+      "vetting": []
+    }
+  ],
+  "summary": {
+    "1": {
+      "detected": 18,
+      "evaluated": 30,
+      "fraction": 0.6,
+      "interval_95": [
+        0.4060349300518187,
+        0.7734423511714064
+      ]
+    },
+    "2": {
+      "detected": 5,
+      "evaluated": 5,
+      "fraction": 1.0,
+      "interval_95": [
+        0.47817624989501856,
+        1.0
+      ]
+    }
+  },
+  "limitations": "Curated labels, unknown identities, unknown times and uncertainties, assumed cadence and arbitrary flux scale; no true-period or survey-representativeness validation."
+}

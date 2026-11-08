@@ -1,0 +1,13 @@
+numpy>=1.23
+scipy>=1.9
+astropy>=5.0
+pyyaml>=6.0
+matplotlib>=3.6
+pandas>=1.5
+tqdm>=4.65
+pytest>=7.0
+# Optional / lazily imported (install for real data and the dashboard):
+# lightkurve>=2.4
+# streamlit>=1.25
+# emcee>=3.1
+# h5py>=3.8

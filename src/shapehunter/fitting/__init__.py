@@ -1,0 +1,1 @@
+"""The shapehunter fitting package."""

@@ -1,0 +1,117 @@
+{
+  "description": "Small deterministic smoke experiment; not suitable for production calibration.",
+  "calibration": {
+    "threshold": 5.109393642626324,
+    "target_rate": 0.5,
+    "training_seeds": [
+      0,
+      1,
+      2
+    ],
+    "training_scores": [
+      4.870750421599044,
+      5.187661099913845,
+      5.109393642626323
+    ],
+    "rank": 2,
+    "note": "Empirical synthetic threshold; not a real-data false-alarm probability."
+  },
+  "holdout": {
+    "threshold": 5.109393642626324,
+    "noise_trials": [
+      {
+        "seed": 3,
+        "detected": false
+      },
+      {
+        "seed": 4,
+        "detected": false
+      }
+    ],
+    "injection_trials": [
+      {
+        "seed": 5,
+        "recovered": true,
+        "periods": [
+          3.5000013699806303
+        ]
+      },
+      {
+        "seed": 6,
+        "recovered": true,
+        "periods": [
+          3.5001136395941277
+        ]
+      }
+    ],
+    "false_alarm_fraction": 0.0,
+    "false_alarm_interval_95": [
+      0.0,
+      0.841886116991581
+    ],
+    "recovery_fraction": 1.0,
+    "recovery_interval_95": [
+      0.15811388300841903,
+      1.0
+    ],
+    "injection": {
+      "period": 3.5,
+      "t0": 2.0,
+      "rp": 0.1,
+      "period_tolerance": 0.01
+    },
+    "note": "Holdout results describe this synthetic generator, not real-survey performance."
+  },
+  "shape_confusion": {
+    "matrix": {
+      "sphere": {
+        "sphere": 2,
+        "ringed": 0,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      },
+      "comet_tail": {
+        "sphere": 0,
+        "ringed": 2,
+        "comet_tail": 0,
+        "binary_planet": 0,
+        "oblate": 0,
+        "dust_cloud": 0,
+        "missed": 0
+      }
+    },
+    "trials": [
+      {
+        "seed": 11,
+        "injected": "sphere",
+        "predicted": "sphere",
+        "status": "PASS"
+      },
+      {
+        "seed": 12,
+        "injected": "sphere",
+        "predicted": "sphere",
+        "status": "PASS"
+      },
+      {
+        "seed": 11,
+        "injected": "comet_tail",
+        "predicted": "ringed",
+        "status": "PASS"
+      },
+      {
+        "seed": 12,
+        "injected": "comet_tail",
+        "predicted": "ringed",
+        "status": "PASS"
+      }
+    ],
+    "period": 3.5,
+    "rp": 0.1,
+    "min_power": 8.0,
+    "note": "Classification at one set of injected parameters; expand the grid before drawing conclusions."
+  }
+}

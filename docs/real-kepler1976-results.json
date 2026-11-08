@@ -1,0 +1,65 @@
+{
+  "catalog_sha256": "3a1bad4f26379d1c46f2c9fdc988203883a975cff9eecaa8aef67594625c67f4",
+  "reference_source": "https://github.com/berkeley-stat238/spring-2026/blob/442f73f93c5d200edd3746d2b27a6fb723725042/exoplanet_data.csv",
+  "planet": "Kepler-1976 b",
+  "results": [
+    {
+      "target": "KIC 11138155",
+      "reference_source": "https://github.com/berkeley-stat238/spring-2026/blob/442f73f93c5d200edd3746d2b27a6fb723725042/exoplanet_data.csv",
+      "expected_period": 4.959319244,
+      "period_tolerance": 0.01,
+      "baseline": 33.4712965991348,
+      "periods": [
+        4.959925043090358
+      ],
+      "recovered": true,
+      "harmonic_periods": [],
+      "candidate_statuses": [
+        "PASS"
+      ],
+      "note": "A single reference target does not establish survey-wide reliability.",
+      "file": "kplr011138155-2009166043257_llc.fits",
+      "sha256": "2dbd18cf9306e4cbe91db945ce9e576f98d1ce54e1032aad17b481c513a167d7",
+      "samples": 1455
+    },
+    {
+      "target": "KIC 11138155",
+      "reference_source": "https://github.com/berkeley-stat238/spring-2026/blob/442f73f93c5d200edd3746d2b27a6fb723725042/exoplanet_data.csv",
+      "expected_period": 4.959319244,
+      "period_tolerance": 0.01,
+      "baseline": 88.70250249374658,
+      "periods": [
+        4.959296985107225
+      ],
+      "recovered": true,
+      "harmonic_periods": [],
+      "candidate_statuses": [
+        "PASS"
+      ],
+      "note": "A single reference target does not establish survey-wide reliability.",
+      "file": "kplr011138155-2009259160929_llc.fits",
+      "sha256": "81f5e6e2580002d3673d0f0a0e6097c9e8a8aaf1937049a87c07ab1d3a9b9d41",
+      "samples": 3815
+    },
+    {
+      "target": "KIC 11138155",
+      "reference_source": "https://github.com/berkeley-stat238/spring-2026/blob/442f73f93c5d200edd3746d2b27a6fb723725042/exoplanet_data.csv",
+      "expected_period": 4.959319244,
+      "period_tolerance": 0.01,
+      "baseline": 89.25101919518784,
+      "periods": [
+        4.959342221258106
+      ],
+      "recovered": true,
+      "harmonic_periods": [],
+      "candidate_statuses": [
+        "PASS"
+      ],
+      "note": "A single reference target does not establish survey-wide reliability.",
+      "file": "kplr011138155-2009350155506_llc.fits",
+      "sha256": "a35dbf74b27078da83332dc128b8b2b0e0e9cb27af77e40a44a7776db4111faa",
+      "samples": 3922
+    }
+  ],
+  "note": "One known host across three quarters; this is not an independent-population benchmark."
+}
