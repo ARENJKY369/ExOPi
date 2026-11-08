@@ -5,6 +5,8 @@ pyyaml>=6.0
 matplotlib>=3.6
 pandas>=1.5
 tqdm>=4.65
+streamlit>=1.25
+Pillow>=10.0
 pytest>=7.0
 # Optional / lazily imported (install for real data and the dashboard):
 # lightkurve>=2.4

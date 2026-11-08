@@ -46,3 +46,57 @@ def velocity_verlet(positions: np.ndarray, velocities: np.ndarray, masses: np.nd
         a = next_a
         xs[i + 1], vs[i + 1] = x, v
     return xs, vs
+
+
+def adaptive_integrate(
+    positions: np.ndarray,
+    velocities: np.ndarray,
+    masses: np.ndarray,
+    duration: float,
+    gravitational_constant: float = 1.0,
+    rtol: float = 1e-8,
+    atol: float = 1e-10,
+    max_step: float | None = None,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Integrate point masses with SciPy's adaptive solver instead of a fixed timestep."""
+    from scipy.integrate import solve_ivp
+
+    x = np.asarray(positions, dtype=float)
+    v = np.asarray(velocities, dtype=float)
+    m = np.asarray(masses, dtype=float)
+    if duration <= 0 or not 0 < rtol < 1 or not 0 < atol < 1:
+        raise ValueError("duration and integration tolerances must be positive and finite")
+    if max_step is not None and max_step <= 0:
+        raise ValueError("max_step must be positive")
+    if x.ndim != 2 or v.shape != x.shape or m.shape != (x.shape[0],):
+        raise ValueError("positions, velocities, and masses have incompatible shapes")
+    a0 = acceleration(x, m, gravitational_constant)
+
+    def rhs(_time: float, state: np.ndarray) -> np.ndarray:
+        n_bodies = len(m)
+        body_x = state[: n_bodies * x.shape[1]].reshape(x.shape)
+        body_v = state[n_bodies * x.shape[1] :].reshape(v.shape)
+        body_a = acceleration(body_x, m, gravitational_constant)
+        return np.concatenate((body_v.ravel(), body_a.ravel()))
+
+    initial = np.concatenate((x.ravel(), v.ravel()))
+    solution = solve_ivp(
+        rhs,
+        (0.0, float(duration)),
+        initial,
+        method="DOP853",
+        rtol=rtol,
+        atol=atol,
+        max_step=float(duration) if max_step is None else float(max_step),
+    )
+    if not solution.success:
+        raise RuntimeError(f"adaptive integration failed: {solution.message}")
+    times = np.asarray(solution.t, dtype=float)
+    states = np.asarray(solution.y, dtype=float)
+    stride = len(m) * x.shape[1]
+    xs = states[:stride].T.reshape((len(times),) + x.shape)
+    vs = states[stride:].T.reshape((len(times),) + v.shape)
+    if not np.all(np.isfinite(xs)) or not np.all(np.isfinite(vs)):
+        raise RuntimeError("adaptive integration produced non-finite state")
+    _ = a0
+    return times, xs, vs

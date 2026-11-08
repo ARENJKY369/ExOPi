@@ -78,7 +78,7 @@ def period_grid(
     period_max: float,
     baseline: float,
     oversample: float = 5.0,
-    max_periods: int = 30000,
+    max_periods: Optional[int] = 30000,
     duration: float = 0.05,
 ) -> np.ndarray:
     """Frequency grid with standard BLS oversampling, returned as periods.
@@ -90,7 +90,13 @@ def period_grid(
         raise ValueError("invalid period grid parameters")
     f_min = 1.0 / period_max
     f_max = 1.0 / period_min
-    n_freq = int(min(max_periods, max(2, np.ceil(oversample * baseline**2 * (f_max - f_min) / duration))))
+    n_requested = max(2, int(np.ceil(oversample * baseline**2 * (f_max - f_min) / duration)))
+    if max_periods is None:
+        n_freq = n_requested
+    else:
+        if max_periods < 2:
+            raise ValueError("max_periods must be at least 2 or None")
+        n_freq = min(int(max_periods), n_requested)
     freqs = np.linspace(f_min, f_max, n_freq)
     return 1.0 / freqs
 
@@ -119,6 +125,7 @@ def run_bls(
     oversample: float = 5.0,
     objective: str = "snr",
     refine: bool = True,
+    max_periods: Optional[int] = 30000,
 ) -> BLSResult:
     """Run a BLS periodogram and (optionally) refine the best box.
 
@@ -153,7 +160,14 @@ def run_bls(
     if durations_arr.size == 0:
         raise ValueError("no trial duration is positive and shorter than the minimum period")
 
-    periods = period_grid(period_min, period_max, baseline, oversample=oversample, duration=float(np.min(durations_arr)))
+    periods = period_grid(
+        period_min,
+        period_max,
+        baseline,
+        oversample=oversample,
+        max_periods=max_periods,
+        duration=float(np.min(durations_arr)),
+    )
     model = BoxLeastSquares(time, flux, err)
     try:
         results = model.power(
@@ -182,7 +196,12 @@ def run_bls(
         objective=objective,
         periods=periods,
         power_spectrum=power,
-        extra={"duration_grid": durations_arr, "minimal_n_transits": minimal_n_transits},
+        extra={
+            "duration_grid": durations_arr,
+            "minimal_n_transits": minimal_n_transits,
+            "max_periods": max_periods,
+            "n_period_samples": len(periods),
+        },
     )
     if refine and depth > 0:
         return refine_result(lightcurve, result, flux_err=err)

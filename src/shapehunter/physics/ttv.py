@@ -9,7 +9,15 @@ from shapehunter.core import LightCurve
 from shapehunter.data.synthetic import trapezoid_eclipse
 
 
-def extract_ttv(curve: LightCurve, period: float, t0: float, duration: float, depth: float, ingress_fraction: float = 0.3) -> list[dict[str, float | int]]:
+def extract_ttv(
+    curve: LightCurve,
+    period: float,
+    t0: float,
+    duration: float,
+    depth: float,
+    ingress_fraction: float = 0.3,
+    fit_duration: bool = True,
+) -> list[dict[str, float | int]]:
     """Fit each observed event's mid-time relative to a linear ephemeris.
 
     Returns epochs, measured mid-times, and observed-minus-calculated offsets.
@@ -29,10 +37,20 @@ def extract_ttv(curve: LightCurve, period: float, t0: float, duration: float, de
         time, flux, err = curve.time[keep], curve.flux[keep], curve.error()[keep]
         if np.any(~np.isfinite(flux)) or np.any(~np.isfinite(err)) or np.any(err <= 0):
             continue
-        def residual(offset: np.ndarray) -> np.ndarray:
-            model = 1 - trapezoid_eclipse(time - predicted - offset[0], depth, duration, ingress_fraction)
-            return (flux - model) / err
-        result = least_squares(residual, [0.0], bounds=([-duration / 2], [duration / 2]))
+        if fit_duration:
+            def residual(params: np.ndarray) -> np.ndarray:
+                model = 1 - trapezoid_eclipse(time - predicted - params[0], depth, params[1], ingress_fraction)
+                return (flux - model) / err
+            result = least_squares(
+                residual,
+                [0.0, duration],
+                bounds=([-duration / 2, 0.5 * duration,], [duration / 2, 1.5 * duration]),
+            )
+        else:
+            def residual(params: np.ndarray) -> np.ndarray:
+                model = 1 - trapezoid_eclipse(time - predicted - params[0], depth, duration, ingress_fraction)
+                return (flux - model) / err
+            result = least_squares(residual, [0.0], bounds=([-duration / 2], [duration / 2]))
         improvement = np.sum(((flux - 1.0) / err)**2) - np.sum(result.fun**2)
         if result.success and improvement > 9.0:
             offset = float(result.x[0])

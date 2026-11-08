@@ -13,7 +13,12 @@ from shapehunter.search import TemplateBank, compare_families, run_bls
 from shapehunter.vetting import vet_candidate
 
 
-def search_star(curve: LightCurve, min_power: float = 8.0, max_candidates: int = 1) -> list[Candidate]:
+def search_star(
+    curve: LightCurve,
+    min_power: float = 8.0,
+    max_candidates: int = 1,
+    max_periods: int | None = 30000,
+) -> list[Candidate]:
     """Search iteratively, masking detected events between BLS passes.
 
     The empirical screening threshold is not a calibrated false-alarm
@@ -32,7 +37,10 @@ def search_star(curve: LightCurve, min_power: float = 8.0, max_candidates: int =
     for _ in range(max_candidates):
         if len(remaining) < 30 or remaining.baseline <= 1.0:
             break
-        result = run_bls(remaining)
+        if max_periods == 30000:
+            result = run_bls(remaining)
+        else:
+            result = run_bls(remaining, max_periods=max_periods)
         if not np.isfinite(result.power) or not np.isfinite(result.snr) or result.power < min_power or result.snr < min_power:
             break
         if not np.isfinite(result.duration) or not np.isfinite(result.period) or result.period <= 0 or result.duration <= 0 or result.duration >= result.period / 2:
@@ -70,13 +78,19 @@ def search_star(curve: LightCurve, min_power: float = 8.0, max_candidates: int =
     return candidates
 
 
-def run_star(curve: LightCurve, out: str | Path, min_power: float = 8.0, max_candidates: int = 1) -> list[Candidate]:
+def run_star(
+    curve: LightCurve,
+    out: str | Path,
+    min_power: float = 8.0,
+    max_candidates: int = 1,
+    max_periods: int | None = 30000,
+) -> list[Candidate]:
     """Run a search and write a JSON candidate list and text report."""
     from shapehunter.report.summary import write_report
 
     directory = Path(out)
     directory.mkdir(parents=True, exist_ok=True)
-    candidates = search_star(curve, min_power=min_power, max_candidates=max_candidates)
+    candidates = search_star(curve, min_power=min_power, max_candidates=max_candidates, max_periods=max_periods)
     (directory / "candidates.json").write_text(
         json.dumps([candidate.to_dict() for candidate in candidates], indent=2, allow_nan=False) + "\n",
         encoding="utf-8",
@@ -96,6 +110,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--no-injection", action="store_true", help="do not inject the synthetic planet")
     parser.add_argument("--max-candidates", type=int, default=1, help="maximum iterative detections (default: 1)")
     parser.add_argument("--min-power", type=float, default=8.0, help="screening threshold for BLS power and fitted SNR")
+    parser.add_argument("--max-periods", type=int, default=30000, help="maximum period-grid samples; use 0 for an uncapped precision grid")
     args = parser.parse_args(argv)
     if args.no_injection and not args.synthetic:
         parser.error("--no-injection requires --synthetic")
@@ -107,7 +122,10 @@ def main(argv: list[str] | None = None) -> int:
         curve = load_lightcurve(args.input)
     if args.max_candidates < 1 or not 0 < args.min_power < float("inf"):
         parser.error("--max-candidates and --min-power must be positive")
-    candidates = run_star(curve, args.out, min_power=args.min_power, max_candidates=args.max_candidates)
+    max_periods = None if args.max_periods == 0 else args.max_periods
+    if max_periods is not None and max_periods < 2:
+        parser.error("--max-periods must be 0 or at least 2")
+    candidates = run_star(curve, args.out, min_power=args.min_power, max_candidates=args.max_candidates, max_periods=max_periods)
     print(f"Wrote {len(candidates)} candidate(s) to {args.out / 'candidates.json'}")
     return 0
 

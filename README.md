@@ -23,7 +23,35 @@ Optional `lightkurve` is imported only when downloading an uncached target;
 optional `streamlit` is imported only when launching `streamlit run dashboard/app.py`.
 Tests use synthetic data and cached files only, with no network access.
 
-## Limits
+## Interactive website
+
+Launch the public-ready dashboard locally:
+
+```sh
+python -m pip install streamlit
+streamlit run dashboard/app.py
+```
+
+For a non-scientific dashboard image upload test, place a downloaded PNG/JPEG in
+this repository and run:
+
+```sh
+python scripts/image_to_npz.py your-image.jpg --out image-test.npz
+```
+
+The generated NPZ samples image brightness across columns; it is UI test data,
+not an astronomical measurement. Delete or clearly label it before any scientific use.
+
+The dashboard supports synthetic searches, saved `.npz` light curves, saved
+`candidates.json` findings, and downloadable findings. Uploads are limited to
+20 MB, stay in server memory for the current session, and are not written by
+the app. Set `SHAPEHUNTER_PASSWORD` to require a private-access password; for
+user accounts, role controls, audit logs, or persistent findings, deploy with a
+proper identity provider and backend database instead of using a shared password.
+Use HTTPS, a host-managed secret store, and dependency security scanning in
+production.
+
+## Scientific boundaries
 
 - BLS uses a capped frequency grid and an empirical threshold; the threshold is
   not a calibrated false-alarm probability. Iterative multi-candidate search is

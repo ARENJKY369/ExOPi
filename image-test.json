@@ -1,0 +1,8 @@
+{
+  "target": "55621721334_6de1ece692_4k",
+  "source": "image_brightness_test",
+  "source_type": "not_astronomical_data",
+  "image_width": 3000,
+  "image_height": 4034,
+  "warning": "Brightness sampling is a UI test, not a measured light curve"
+}
